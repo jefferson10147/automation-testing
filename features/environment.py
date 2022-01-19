@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 def browser_init(context):
@@ -28,4 +27,3 @@ def after_step(context, step):
 def after_scenario(context, feature):
     context.browser.delete_all_cookies()
     context.browser.quit()
-    
