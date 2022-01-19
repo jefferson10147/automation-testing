@@ -1,11 +1,15 @@
+from decouple import config
 from selenium import webdriver
+
+
+CHROME_DRIVER_PATH = config('CHROME_DRIVER_PATH')
 
 
 def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome(executable_path='C:\\Users\\58412\\Desktop\\automation\\chromedriver.exe')
+    context.driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
     context.driver.maximize_window()
     context.driver.implicitly_wait(5)
 
