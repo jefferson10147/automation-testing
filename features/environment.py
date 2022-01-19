@@ -5,9 +5,9 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome('./chromedriver.exe')
-    context.browser.maximize_window()
-    context.browser.implicitly_wait(5)
+    context.driver = webdriver.Chrome(executable_path='C:\\Users\\58412\\Desktop\\automation\\chromedriver.exe')
+    context.driver.maximize_window()
+    context.driver.implicitly_wait(5)
 
 
 def before_scenario(context, scenario):
@@ -25,5 +25,5 @@ def after_step(context, step):
 
 
 def after_scenario(context, feature):
-    context.browser.delete_all_cookies()
-    context.browser.quit()
+    context.driver.delete_all_cookies()
+    context.driver.quit()
