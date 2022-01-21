@@ -1,5 +1,10 @@
+from decouple import config
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+
+BASE_PAGE = config('BASE_PAGE')
 
 
 class Page:
@@ -7,7 +12,7 @@ class Page:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
-        self.base_url = 'https://www.amazon.com/'
+        self.base_url = BASE_PAGE
 
     def click(self, *locator):
         self.driver.find_element(*locator).click()
