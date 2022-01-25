@@ -1,3 +1,5 @@
 env
 .env
 chromedriver.exe
+app/__pycache__/
+pages/__pycache__/
