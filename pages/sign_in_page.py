@@ -3,7 +3,7 @@ from decouple import config
 from pages.base_page import Page
 
 
-SING_IN_PAGE = config('SING_IN_PAGE')
+SING_IN_PAGE = config('SIGNIN_PAGE')
 
 
 class SignIn(Page):
