@@ -6,6 +6,6 @@ def open_page(context):
     context.app.sign_in_page.open_page()
     
 
-@when('Verify the correct page is openned')
+@when('Locate Amazon logo')
 def verify_the_page(context):
     pass
