@@ -9,3 +9,8 @@ def open_page(context):
 @when('Locate Amazon logo')
 def verify_the_page(context):
     pass
+
+
+@when('Locate the email field')
+def locate_email_field(context):
+    pass
