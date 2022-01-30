@@ -29,7 +29,7 @@ class Page:
         e.send_keys(text)
 
     def open_page(self, end_url=''):
-        print(f'{self.base_url}{end_url}')
+        # print(f'{self.base_url}{end_url}')
         self.driver.get(f'{self.base_url}{end_url}')
 
     def wait_for_element_click(self, *locator):
