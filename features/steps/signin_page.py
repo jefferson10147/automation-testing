@@ -14,3 +14,8 @@ def verify_the_page(context):
 @when('Locate the email field')
 def locate_email_field(context):
     pass
+
+
+@when('Locate continue button')
+def locate_continue_button(context):
+    pass
