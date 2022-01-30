@@ -39,8 +39,3 @@ def locate_help_link(context):
 @when('Locate Forgot your password link')
 def locate_forgot_password_link(context):
     pass
-
-
-@when('Locate Other Issues link')
-def locate_other_issues_link(context):
-    pass
