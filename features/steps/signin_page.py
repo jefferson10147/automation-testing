@@ -19,3 +19,8 @@ def locate_email_field(context):
 @when('Locate continue button')
 def locate_continue_button(context):
     pass
+
+
+@when('')
+def locate_conditions_link(context):
+    pass
