@@ -13,7 +13,7 @@ def locate_logo(context):
 
 @when('Locate the email field')
 def locate_email_field(context):
-    pass
+    context.app.sign_in_page.locate_email_field()
 
 
 @when('Locate continue button')
