@@ -24,3 +24,8 @@ def locate_continue_button(context):
 @when('Locate Conditions of Use link')
 def locate_conditions_link(context):
     pass
+
+
+@when('Locate Privacy Notice link')
+def locate_privacy_link(context):
+    pass
