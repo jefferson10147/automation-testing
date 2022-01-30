@@ -7,8 +7,8 @@ def open_page(context):
     
 
 @when('Locate Amazon logo')
-def verify_the_page(context):
-    pass
+def locate_logo(context):
+    context.app.sig_in_page.locate_amazon_logo()
 
 
 @when('Locate the email field')
@@ -46,6 +46,6 @@ def locate_other_issues_link(context):
     pass
 
 
-@when('Locate Create your Amazon account button')
+@then('Locate Create your Amazon account button')
 def locate_create_account_button(context):
     pass
