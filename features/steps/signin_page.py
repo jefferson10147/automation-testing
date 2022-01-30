@@ -44,3 +44,8 @@ def locate_forgot_password_link(context):
 @when('Locate Other Issues link')
 def locate_other_issues_link(context):
     pass
+
+
+@when('Locate Create your Amazon account button')
+def locate_create_account_button(context):
+    pass
