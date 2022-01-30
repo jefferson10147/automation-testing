@@ -21,6 +21,6 @@ def locate_continue_button(context):
     pass
 
 
-@when('')
+@when('Locate Conditions of Use link')
 def locate_conditions_link(context):
     pass
