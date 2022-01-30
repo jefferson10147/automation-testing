@@ -8,7 +8,7 @@ def open_page(context):
 
 @when('Locate Amazon logo')
 def locate_logo(context):
-    context.app.sig_in_page.locate_amazon_logo()
+    context.app.sign_in_page.locate_amazon_logo()
 
 
 @when('Locate the email field')
