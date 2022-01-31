@@ -12,6 +12,7 @@ class SignIn(Page):
 
     AMAZON_LOGO = (By.CSS_SELECTOR, 'i.a-icon.a-icon-logo')
     EMAIL_FIELD = (By.ID, 'ap_email')
+    CONTINUE_BTN = (By.ID, 'continue')
 
     def open_page(self, end_url=SING_IN_PAGE) -> None:
         super().open_page(end_url)
@@ -21,3 +22,7 @@ class SignIn(Page):
 
     def locate_email_field(self):
         self.find_element(*self.EMAIL_FIELD)
+
+    def locate_continue_btn(self):
+        expected_text = 'Continue'
+        self.verify_text(expected_text, *self.CONTINUE_BTN)
