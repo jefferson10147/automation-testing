@@ -18,7 +18,7 @@ def locate_email_field(context):
 
 @when('Locate continue button')
 def locate_continue_button(context):
-    pass
+    context.app.sign_in_page.locate_continue_btn()
 
 
 @when('Locate Conditions of Use link')
