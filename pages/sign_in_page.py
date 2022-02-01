@@ -19,20 +19,20 @@ class SignIn(Page):
     def open_page(self, end_url=SING_IN_PAGE) -> None:
         super().open_page(end_url)
 
-    def locate_amazon_logo(self):
+    def locate_amazon_logo(self) -> None:
         self.find_element(*self.AMAZON_LOGO)
 
-    def locate_email_field(self):
+    def locate_email_field(self) -> None:
         self.find_element(*self.EMAIL_FIELD)
 
-    def locate_continue_btn(self):
+    def locate_continue_btn(self) -> None:
         expected_text = 'Continue'
         self.verify_text(expected_text, *self.CONTINUE_BTN)
 
-    def locate_conditions_link(self):
+    def locate_conditions_link(self) -> None:
         expected_text = 'Conditions of Use'
         self.verify_text(expected_text, *self.CONDITIONS_OF_USE)
 
-    def locate_privacy_notice_link(self):
+    def locate_privacy_notice_link(self) -> None:
         expected_text = 'Privacy Notice'
         self.verify_text(expected_text, *self.PRIVACY_NOTICE)
