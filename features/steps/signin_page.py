@@ -33,7 +33,7 @@ def locate_privacy_link(context):
 
 @when('Locate Need help link')
 def locate_help_link(context):
-    pass
+    context.app.sign_in_page.locate_need_help_link()
 
 
 @when('Locate Forgot your password link')

@@ -15,6 +15,7 @@ class SignIn(Page):
     CONTINUE_BTN = (By.ID, 'continue')
     CONDITIONS_OF_USE = (By.CSS_SELECTOR, 'a[href *= "ref=ap_signin_notification_condition_of_use?"]')
     PRIVACY_NOTICE = (By.CSS_SELECTOR, 'a[href *= "ref=ap_signin_notification_privacy_notice?"]')
+    NEED_HELP = (By.CSS_SELECTOR, 'a span.a-expander-prompt')
 
     def open_page(self, end_url=SING_IN_PAGE) -> None:
         super().open_page(end_url)
@@ -36,3 +37,7 @@ class SignIn(Page):
     def locate_privacy_notice_link(self) -> None:
         expected_text = 'Privacy Notice'
         self.verify_text(expected_text, *self.PRIVACY_NOTICE)
+
+    def locate_need_help_link(self) -> None:
+        expected_text = 'Need help?'
+        self.verify_text(expected_text, *self.NEED_HELP)
