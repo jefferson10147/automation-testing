@@ -23,7 +23,7 @@ def locate_continue_button(context):
 
 @when('Locate Conditions of Use link')
 def locate_conditions_link(context):
-    pass
+    context.app.sign_in_page.locate_conditions_link()
 
 
 @when('Locate Privacy Notice link')
