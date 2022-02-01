@@ -6,7 +6,7 @@ Feature: test cases for sign-in page
         And Locate the email field
         And Locate continue button
         And Locate Conditions of Use link
-        # And Locate Privacy Notice link
+        And Locate Privacy Notice link
         # And Locate Need help link
         # And Locate Forgot your password link
         # And Locate Other Issues link

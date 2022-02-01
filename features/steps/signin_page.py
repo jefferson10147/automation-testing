@@ -28,7 +28,7 @@ def locate_conditions_link(context):
 
 @when('Locate Privacy Notice link')
 def locate_privacy_link(context):
-    pass
+    context.app.sign_in_page.locate_privacy_notice_link()
 
 
 @when('Locate Need help link')
