@@ -8,6 +8,4 @@ Feature: test cases for sign-in page
         And Locate Conditions of Use link
         And Locate Privacy Notice link
         And Locate Need help link
-        # And Locate Forgot your password link
-        # And Locate Other Issues link
         # Then Locate Create your Amazon account button
