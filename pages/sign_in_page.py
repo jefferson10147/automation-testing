@@ -16,6 +16,7 @@ class SignIn(Page):
     CONDITIONS_OF_USE = (By.CSS_SELECTOR, 'a[href *= "ref=ap_signin_notification_condition_of_use?"]')
     PRIVACY_NOTICE = (By.CSS_SELECTOR, 'a[href *= "ref=ap_signin_notification_privacy_notice?"]')
     NEED_HELP = (By.CSS_SELECTOR, 'a span.a-expander-prompt')
+    CREATE_ACCOUNT = (By.ID, 'createAccountSubmit')
 
     def open_page(self, end_url=SING_IN_PAGE) -> None:
         super().open_page(end_url)
@@ -41,3 +42,7 @@ class SignIn(Page):
     def locate_need_help_link(self) -> None:
         expected_text = 'Need help?'
         self.verify_text(expected_text, *self.NEED_HELP)
+
+    def locate_create_account_btn(self) -> None:
+        expected_text = 'Create your Amazon account'
+        self.verify_text(expected_text, *self.CREATE_ACCOUNT)

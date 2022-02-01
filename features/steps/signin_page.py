@@ -48,4 +48,4 @@ def locate_other_issues_link(context):
 
 @then('Locate Create your Amazon account button')
 def locate_create_account_button(context):
-    pass
+    context.app.sign_in_page.locate_create_account_btn()
