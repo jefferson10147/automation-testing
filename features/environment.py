@@ -1,5 +1,6 @@
 from decouple import config
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
 from app.application import Application
 
@@ -8,10 +9,10 @@ CHROME_DRIVER_PATH = config('CHROME_DRIVER_PATH')
 
 
 def browser_init(context):
-    """
-    :param context: Behave context
-    """
-    context.driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
+    service = Service(CHROME_DRIVER_PATH)
+    options = webdriver.ChromeOptions()
+    context.driver = webdriver.Chrome(service=service, options=options)
+    # context.driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
     context.app = Application(context.driver)
     context.driver.implicitly_wait(5)
     context.driver.maximize_window()
