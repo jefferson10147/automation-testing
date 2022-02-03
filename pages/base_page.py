@@ -28,6 +28,10 @@ class Page:
         e.clear()
         e.send_keys(text)
 
+    def input_keys(self, key, *locator):
+        e = self.driver.find_element(*locator)
+        e.send_keys(key)
+
     def open_page(self, end_url=''):
         # print(f'{self.base_url}{end_url}')
         self.driver.get(f'{self.base_url}{end_url}')
