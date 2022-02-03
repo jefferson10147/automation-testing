@@ -1,4 +1,3 @@
-from turtle import st
 from decouple import config
 from pages.base_page import Page
 
