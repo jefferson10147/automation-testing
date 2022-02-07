@@ -11,4 +11,3 @@ class NavBar(Page):
     def input_into_search_bar(self, text: str):
         self.input_text(text, *self.SEARCH_BAR)
         self.input_keys(Keys.BACK_SPACE, *self.SEARCH_BAR)
-
