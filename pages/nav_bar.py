@@ -11,7 +11,7 @@ class NavBar(Page):
 
     def input_into_search_bar(self, text: str):
         self.input_text(text, *self.SEARCH_BAR)
-        self.input_keys(Keys.BACK_SPACE, *self.SEARCH_BAR)
+        self.input_keys(Keys.ENTER, *self.SEARCH_BAR)
 
     def verify_cart_count(self, number_of_items='1'):
         self.verify_text(number_of_items, *self.CART_COUNT)
