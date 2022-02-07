@@ -15,6 +15,9 @@ class HelpCustomer(Page):
     HELP_TOPICS_TITLE = (By.CSS_SELECTOR, '.a-span12.a-column.a-spacing-top-small h1')
     TOPICS = (By.ID, 'category-section')
 
+    def open_help_page(self):
+        self.open_page(end_url=CUSTOMER_PAGE)
+
     def locate_welcome_text(self):
         self.find_element(*self.WELCOME_TEXT)
 
