@@ -4,6 +4,7 @@ from pages.main_page import MainPage
 from pages.best_sellers import BestSellers
 from pages.product_page import ProductPage
 from pages.nav_bar import NavBar
+from pages.help_customer_page import HelpCustomer
 
 
 class Application:
@@ -16,3 +17,4 @@ class Application:
         self.best_sellers = BestSellers(self.driver)
         self.product_page = ProductPage(self.driver)
         self.nav_bar = NavBar(self.driver)
+        self.help_customer_page = HelpCustomer(self.driver)
