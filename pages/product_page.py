@@ -27,9 +27,9 @@ class ProductPage(Page):
 
     def verify_colors(self):
         colors = (
-            'Black', ' Dark Khaki Brown', 'Dark Indigo/Rinsed', 'Dark Wash',
+            'Black', 'Dark Blue Vintage', 'Dark Indigo/Rinsed', 'Dark Wash',
             'Indigo Wash', 'Light Blue Vintage', 'Light Wash', 'Medium Blue, Vintage',
-            'Medium Wash', 'Rinsed', ' Vintage Wash', 'Washed Black',
+            'Medium Wash', 'Rinsed', 'Vintage Wash', 'Washed Black',
             'Bright White', 'Dark Khaki Brown', 'Light Khaki Brown', 'Olive',
             'Sage Green', 'Blue, Over Dye', 'Blue, Dip Dye'
         )
