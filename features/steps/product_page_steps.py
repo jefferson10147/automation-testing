@@ -1,4 +1,9 @@
-from behave import when, then
+from behave import given, when, then
+
+
+@given('Open product page with id {product_id}')
+def open_page(context, product_id):
+    context.app.product_page.open_product_page(product_id)
 
 
 @when('Search in the search field for {product}')
@@ -19,3 +24,8 @@ def add_product(context):
 @then('Verify there are {number_of_items} products added in the cart')
 def verify_number(context, number_of_items):
     context.app.nav_bar.verify_cart_count(number_of_items)
+
+
+@then('User can click over all colors')
+def verify_colors(context):
+    context.app.product_page.verify_colors()
