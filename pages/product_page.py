@@ -6,6 +6,7 @@ from decouple import config
 
 
 PRODUCT_PAGE = config('PRODUCT_PAGE')
+WHOLEFOODS = config('WHOLEFOODS')
 
 
 class ProductPage(Page):
@@ -22,6 +23,9 @@ class ProductPage(Page):
     def open_product_page(self, id):
         end_point = PRODUCT_PAGE + id + '/'
         self.open_page(end_url=end_point)
+
+    def open_wholefoods_page(self):
+        self.open_page(end_url=WHOLEFOODS)
 
     def click_in_first_product(self):
         self.click(*self.PRICES)
