@@ -19,6 +19,8 @@ class ProductPage(Page):
         By.CSS_SELECTOR,
         '#wfm-pmd_deals_section .a-size-small.a-color-tertiary.wfm-sales-item-card__regular-price'
     )
+    CLOSE_BTN = (By.CSS_SELECTOR, '.glow-toaster-footer span.a-button-inner input')
+
 
     def open_product_page(self, id):
         end_point = PRODUCT_PAGE + id + '/'
@@ -29,6 +31,9 @@ class ProductPage(Page):
 
     def click_in_first_product(self):
         self.click(*self.PRICES)
+
+    def click_close_btn(self):
+        self.click(*self.CLOSE_BTN)
 
     def add_to_cart(self):
         self.click(*self.ADD_CART_BTN)
@@ -51,4 +56,4 @@ class ProductPage(Page):
         elements = self.find_elements(*self.REGULAR_TEXT)
 
         for element in elements:
-            self.verify_text_by_element(expected_text, element)
+            self.element_contains_text(expected_text, element)
