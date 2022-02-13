@@ -47,7 +47,11 @@ class Page:
         return self.wait.until(EC.presence_of_element_located(locator))
 
     def verify_text(self, expected_text, *locator):
-        actual_text = self.driver.find_element(*locator).text
+        element = self.driver.find_element(*locator)
+        self.verify_text_by_element(expected_text, element)
+
+    def verify_text_by_element(self, expected_text, element):
+        actual_text = element.text
         assert expected_text == actual_text, f'Expected {expected_text}, but got {actual_text}'
 
     def verify_url_contains_query(self, query):
