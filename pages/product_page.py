@@ -14,6 +14,10 @@ class ProductPage(Page):
     ADD_CART_BTN = (By.ID, 'add-to-cart-button')
     PANTS = (By.CSS_SELECTOR, '#variation_color_name ul li')
     SELECTION_TEXT = (By.CSS_SELECTOR, '#variation_color_name span.selection')
+    REGULAR_TEXT = (
+        By.CSS_SELECTOR,
+        '#wfm-pmd_deals_section .a-size-small.a-color-tertiary.wfm-sales-item-card__regular-price'
+    )
 
     def open_product_page(self, id):
         end_point = PRODUCT_PAGE + id + '/'
@@ -37,3 +41,10 @@ class ProductPage(Page):
         for i in range(len(colors)):
             self.find_elements(*self.PANTS)[i].click()
             self.verify_text(colors[i], *self.SELECTION_TEXT)
+
+    def verfiy_regular_text(self):
+        expected_text = 'Regular'
+        elements = self.find_elements(*self.REGULAR_TEXT)
+
+        for element in elements:
+            self.verify_text_by_element(expected_text, element)
