@@ -50,7 +50,8 @@ class Page:
         return self.wait.until(EC.presence_of_element_located(locator))
 
     def wait_for_new_window_to_load(self):
-        self.wait.until(EC.new_window_is_opened(self.get_windows()))
+        # self.wait.until(EC.new_window_is_opened(self.get_windows()))
+        self.wait.until(EC.new_window_is_opened)
 
     def verify_text(self, expected_text, *locator):
         element = self.driver.find_element(*locator)
@@ -74,4 +75,4 @@ class Page:
         return self.driver.window_handles
 
     def switch_to_window(self, window):
-        self.driver.switch_to_window(window)
+        self.driver.switch_to.window(window)
