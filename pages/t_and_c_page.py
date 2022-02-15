@@ -7,7 +7,7 @@ from pages.base_page import Page
 T_AND_C_URL = config('T_AND_C_PAGE')
 
 
-class T_AND_C_PAGE(Page):
+class TandCPage(Page):
 
     PRIVACY_NOTICE_LINK = (By.CSS_SELECTOR, 'a[href*="/privacy"]')
     PRIVACY_NOTICE_TITLE = (By.CSS_SELECTOR, '.help-content h1')
