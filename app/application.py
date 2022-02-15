@@ -5,6 +5,7 @@ from pages.best_sellers import BestSellers
 from pages.product_page import ProductPage
 from pages.nav_bar import NavBar
 from pages.help_customer_page import HelpCustomer
+from pages.t_and_c_page import T_AND_C_PAGE
 
 
 class Application:
@@ -18,3 +19,4 @@ class Application:
         self.product_page = ProductPage(self.driver)
         self.nav_bar = NavBar(self.driver)
         self.help_customer_page = HelpCustomer(self.driver)
+        self.t_and_c_page = T_AND_C_PAGE(self.driver)
