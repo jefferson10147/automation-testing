@@ -57,6 +57,10 @@ class Page:
         element = self.driver.find_element(*locator)
         self.verify_text_by_element(expected_text, element)
 
+    def contains_text(self, expected_text, *locator):
+        element = self.driver.find_element(*locator)
+        self.element_contains_text(expected_text, element)
+
     def element_contains_text(self, expected_text, element):
         actual_text = element.text
         assert expected_text in actual_text, f'Expected {expected_text}, but got {actual_text}'
