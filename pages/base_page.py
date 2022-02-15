@@ -36,6 +36,9 @@ class Page:
         # print(f'{self.base_url}{end_url}')
         self.driver.get(f'{self.base_url}{end_url}')
 
+    def close_page(self):
+        self.driver.close()
+
     def wait_for_element_click(self, *locator):
         e = self.wait.until(EC.element_to_be_clickable(locator))
         e.click()
@@ -45,6 +48,9 @@ class Page:
 
     def wait_for_element_appear(self, *locator):
         return self.wait.until(EC.presence_of_element_located(locator))
+
+    def wait_for_new_window_to_load(self):
+        self.wait.until(EC.new_window_is_opened(self.get_windows()))
 
     def verify_text(self, expected_text, *locator):
         element = self.driver.find_element(*locator)
@@ -63,3 +69,9 @@ class Page:
 
     def get_original_window(self):
         return self.driver.current_window_handle
+
+    def get_windows(self) -> list:
+        return self.driver.window_handles
+
+    def switch_to_window(self, window):
+        self.driver.switch_to_window(window)
