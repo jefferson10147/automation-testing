@@ -4,7 +4,7 @@ from selenium.webdriver.support.events import AbstractEventListener
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler('./test_automation.log')
+handler = logging.FileHandler('./status/test_automation.log')
 handler.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
