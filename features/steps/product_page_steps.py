@@ -31,6 +31,16 @@ def click_btn(context):
     context.app.product_page.click_close_btn()
 
 
+@when('Click in deparments dropdown')
+def click_in_deparments(context):
+    context.app.nav_bar.click_in_dropdown()
+
+
+@when('Click in Videogames option')
+def click_in_option(context):
+    context.app.nav_bar.click_in_videogames_option()
+
+
 @then('Verify there are {number_of_items} products added in the cart')
 def verify_number(context, number_of_items):
     context.app.nav_bar.verify_cart_count(number_of_items)
@@ -44,3 +54,8 @@ def verify_colors(context):
 @then('Verify the regular word')
 def verify_word(context):
     context.app.product_page.verfiy_regular_text()
+
+
+@then('Verify {result} text is present in result page')
+def verify_result(context, result):
+    context.app.product_page.verify_product_in_result_page(result)
