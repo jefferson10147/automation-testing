@@ -17,13 +17,8 @@ def browser_init(context):
 
     if HEADLESS_MODE:
         options.add_argument('--headless')
-        context.driver = EventFiringWebDriver(
-            webdriver.Chrome(chrome_options = options),
-            MyListener()
-        )
-    else: 
-        context.driver = EventFiringWebDriver(webdriver.Chrome(), MyListener())
-
+     
+    context.driver = EventFiringWebDriver(webdriver.Chrome(chrome_options=options), MyListener())
     context.driver = webdriver.Chrome(service=service, options=options) 
     context.app = Application(context.driver)
     
