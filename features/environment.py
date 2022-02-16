@@ -8,14 +8,25 @@ from support.logger import logger, MyListener
 
 
 CHROME_DRIVER_PATH = config('CHROME_DRIVER_PATH')
+HEADLESS_MODE = False
 
 
 def browser_init(context):
     service = Service(CHROME_DRIVER_PATH)
     options = webdriver.ChromeOptions()
-    context.driver = webdriver.Chrome(service=service, options=options)
-    context.driver = EventFiringWebDriver(webdriver.Chrome(), MyListener())
+
+    if HEADLESS_MODE:
+        options.add_argument('--headless')
+        context.driver = EventFiringWebDriver(
+            webdriver.Chrome(chrome_options = options),
+            MyListener()
+        )
+    else: 
+        context.driver = EventFiringWebDriver(webdriver.Chrome(), MyListener())
+
+    context.driver = webdriver.Chrome(service=service, options=options) 
     context.app = Application(context.driver)
+    
     context.driver.implicitly_wait(5)
     context.driver.maximize_window()
     
