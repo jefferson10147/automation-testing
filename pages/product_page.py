@@ -20,6 +20,10 @@ class ProductPage(Page):
         '#wfm-pmd_deals_section .a-size-small.a-color-tertiary.wfm-sales-item-card__regular-price'
     )
     CLOSE_BTN = (By.CSS_SELECTOR, '.glow-toaster-footer span.a-button-inner input')
+    RESULT = (
+        By.CSS_SELECTOR,
+        '.a-section.a-spacing-small.a-spacing-top-small span.a-color-state.a-text-bold'
+    )
 
 
     def open_product_page(self, id):
@@ -57,3 +61,6 @@ class ProductPage(Page):
 
         for element in elements:
             self.element_contains_text(expected_text, element)
+
+    def verify_product_in_result_page(self, expected_text):
+        self.verify_text(expected_text, *self.RESULT)
