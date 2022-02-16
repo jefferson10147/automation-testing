@@ -4,3 +4,4 @@ chromedriver.exe
 app/__pycache__/
 pages/__pycache__/
 support/__pycache__/
+status/*
