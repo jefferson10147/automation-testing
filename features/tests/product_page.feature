@@ -15,3 +15,10 @@ Feature: test cases for product page
         Given Open Wholefoods page
         When Click in close button
         Then Verify the regular word
+
+    Scenario: User can select a deparment and search for a product
+        Given Open Amazon page
+        When Click in deparments dropdown
+        When Click in Videogames option
+        And Search in the search field for ps4
+        Then Verify "ps4" text is present in result page
