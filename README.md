@@ -7,7 +7,7 @@
 <table>
     <tr>
         <td>
-            Test Automation practices in Amazon's main website. Using Selenium and Behave libraries with Python. Taking into consideration the Base Page object model. For the automation testing execution, it is recommended to use Chromedriver.
+            Test Automation practices in Amazon's main website. Using Selenium and Behave libraries with Python. Taking into consideration the Base Page object model. For the automation testing execution, using the Chrome browser and Chrome dev tools.
         </td>
     </tr>
 </table>
