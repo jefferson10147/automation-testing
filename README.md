@@ -14,7 +14,7 @@
 
 ### Testing page
 
-The page is being used for all scenarios test cases is [Amazon official website](https://www.amazon.com)
+The page that is being used for all scenarios test cases is [Amazon official website](https://www.amazon.com)
 
 ![amazon_logo](https://guiaimpresion.com/wp-content/uploads/2020/06/Logotipo-Amazon-300x169.jpg)
 
