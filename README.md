@@ -16,7 +16,7 @@
 
 The page is being used for all scenarios test cases is [Amazon official website](https://www.amazon.com)
 
-![amazon_logo](//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/245px-Amazon_logo.svg.png)
+![amazon_logo](https://guiaimpresion.com/wp-content/uploads/2020/06/Logotipo-Amazon-300x169.jpg)
 
 ## Installation and Usage (UNIX Systems)
 
