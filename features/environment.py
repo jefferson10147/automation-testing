@@ -19,7 +19,7 @@ def browser_init(context):
         options.add_argument('--headless')
      
     context.driver = EventFiringWebDriver(webdriver.Chrome(chrome_options=options), MyListener())
-    context.driver = webdriver.Chrome(service=service, options=options) 
+    #context.driver = webdriver.Chrome(service=service, options=options) 
     context.app = Application(context.driver)
     
     context.driver.implicitly_wait(5)
