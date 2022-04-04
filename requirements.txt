@@ -1,3 +1,4 @@
 selenium
 behave
 python-decouple
+allure-behave
